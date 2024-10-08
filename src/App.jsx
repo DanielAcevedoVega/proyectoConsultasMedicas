@@ -1,4 +1,5 @@
 import React from 'react';
+import InputField from './components/inputField';
 
 const App = () => {
   return (
@@ -6,15 +7,9 @@ const App = () => {
     <div className='container__form'>
       <form action="#" className='login__form'>
       <h2 className="from__title">Inicio de Sesion</h2>
-        <div className='input__wrapper'>
-          <input type="text" placeholder='Usuario' className='input__field' required/>
-          <i className="material-symbols-outlined">person</i>
-        </div>
+        <InputField type="text" placeholder='Usuario' icon="person"/>
+        <InputField type="password" placeholder='Contraseña' icon="lock"/>
 
-        <div className='input__wrapper'>
-          <input type="password" placeholder='Contraseña' className='input__field' required/>
-          <i className="material-symbols-outlined">lock</i>
-        </div>
         <div className='forgot__pass__link'>
           <a href="#">Olvidaste la Contraseña?</a>
         </div>

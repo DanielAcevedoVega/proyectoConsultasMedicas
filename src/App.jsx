@@ -1,9 +1,11 @@
 import React from 'react';
 import InputField from './components/inputField';
+import SignUp from './components/SignUp';
 
 const App = () => {
   return (
   <div className='login__container'>
+    <SignUp/>
     <div className='container__form'>
       <form action="#" className='login__form'>
       <h2 className="from__title">Inicio de Sesion</h2>
@@ -14,7 +16,7 @@ const App = () => {
           <a href="#">Olvidaste la Contraseña?</a>
         </div>
         <button className='login__button' type='submit'>Ingresar</button>
-        <p className='signup__text'>No tienes una cuenta? <a href="#">Registrate</a></p>
+        <p className='signup__text'>No tienes una cuenta? <a href="#" className="signup__link">Registrate</a></p>
       </form>
       
     </div>

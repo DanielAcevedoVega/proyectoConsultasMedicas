@@ -67,11 +67,19 @@ body{
   position: absolute;
   color: #ff7b8877;
   top: 50%;
-  left: 0.9rem;
-  pointer-events: none;
   transform: translateY(-50%);
   text-transform: capitalize;
   transform: all .5s ease;
+}
+.input__wrapper i:not(.eye-icon){
+  left: 0.9rem;
+  pointer-events: none;
+}
+.input__wrapper i.eye-icon{
+  font-size:  2rem;
+  cursor: pointer;
+  right: 0.9rem;
+  display: none;
 }
 
 .input__wrapper input{
@@ -92,7 +100,12 @@ body{
 .input__field:focus ~ i{
   color: #da4453;
 } 
-
+.input__field:focus ~ i:not(.eye-icon){
+  color: #da4453;
+}
+.input__field:valid ~ i.eye-icon{
+  display: block;
+}
 .forgot__pass__link{
   margin: -1.5rem 0 1.5rem;
 }

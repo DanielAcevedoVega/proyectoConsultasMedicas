@@ -18,8 +18,8 @@ const App = () => {
     <div className='container__form'>
       <form action="#" className='login__form'>
       <h2 className="from__title">Inicio de Sesion</h2>
-        <InputField type="text" placeholder='Usuario' icon="person"/>
-        <InputField type="password" placeholder='Contraseña' icon="lock"/>
+        <InputField id="user" type="text" name="user_l" placeholder='Usuario' icon="person"/>
+        <InputField id="pass" type="password" name="pass_l" placeholder='Contraseña' icon="lock"/>
 
         <div className='forgot__pass__link'>
           <a href="#">Olvidaste la Contraseña?</a>

@@ -8,10 +8,12 @@
 }
 
 :root{
-  --mainColor: #89216b;
+  --mainColor: #218980;
   --whiteColor: #ffffff;
   --titleColor: #555555;
   --boxColor: #333333;
+  --contrastColor: #4460da;
+  --opacColor: #7bb0ff77;
 }
 
 html{
@@ -20,7 +22,7 @@ html{
 }
 
 body{
-  background: linear-gradient(to right, #da4453, var(--mainColor));
+  background: linear-gradient(to right, var(--contrastColor), var(--mainColor));
   font-weight: 400;
   min-height: 100vh;
   display: grid;
@@ -34,8 +36,6 @@ body{
   height: 50rem;
 }
 
-
-
 .container__form{
   position: absolute;
   top: 0;
@@ -48,6 +48,14 @@ body{
   background-color: var(--whiteColor);
   border-radius: .5rem;
   box-shadow: 0 0 1rem 0 rgba(0 0 0 / .2);
+}
+
+.container__form img{
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  top: 0;
+  right: 2rem;
 }
 
 .from__title {
@@ -65,7 +73,7 @@ body{
 
 .input__wrapper i{
   position: absolute;
-  color: #ff7b8877;
+  color: var(--opacColor);
   top: 50%;
   transform: translateY(-50%);
   text-transform: capitalize;
@@ -87,21 +95,21 @@ body{
   height: 4rem;
   padding: 0 4rem;
   border-radius: .5rem;
-  border: .1rem solid #ff7b8877;
+  border: .1rem solid var(--opacColor);
   outline: none;
   font-size: 1.6rem;
   color: var(--boxColor);
 }
 
 .input__field:focus{
-  border-color: #da4453;
+  border-color: var(--contrastColor);
 } 
 
 .input__field:focus ~ i{
-  color: #da4453;
+  color: var(--contrastColor);
 } 
 .input__field:focus ~ i:not(.eye-icon){
-  color: #da4453;
+  color: var(--contrastColor);
 }
 .input__field:valid ~ i.eye-icon{
   display: block;
@@ -120,7 +128,7 @@ body{
   color: var(--mainColor);
 }
 .login__button{
-  background: linear-gradient(to right, #da4453, var(--mainColor));
+  background: linear-gradient(to right, var(--contrastColor), var(--mainColor));
   color: var(--whiteColor);
   text-transform: capitalize;
   width: 100%;
@@ -160,7 +168,7 @@ body{
   transition: all .5s ease;
 }
 .signup__text a:hover{
-  color: #da4453;
+  color: var(--contrastColor);
 }
 
 .container__signup{

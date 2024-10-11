@@ -18,6 +18,7 @@ const App = () => {
   <div className={`login__container ${isSignIn ? 'animated-signin' : 'animated-signup'}`}>
     <SignUp handleSignInClick={handleSignInClick}/>
     <div className='container__form'>
+      <img src="public/logoAmesta.svg" alt="" />
       <form action="#" className='login__form' onSubmit={login}>
       <h2 className="from__title">Inicio de Sesion</h2>
         <InputField id="user" type="text" name="user_l" placeholder='Usuario' icon="person"/>

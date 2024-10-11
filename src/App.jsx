@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import InputField from './components/inputField';
 import SignUp from './components/SignUp';
+import login from './js/components/login';
+
 
 const App = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -16,7 +18,7 @@ const App = () => {
   <div className={`login__container ${isSignIn ? 'animated-signin' : 'animated-signup'}`}>
     <SignUp handleSignInClick={handleSignInClick}/>
     <div className='container__form'>
-      <form action="#" className='login__form'>
+      <form action="#" className='login__form' onSubmit={login}>
       <h2 className="from__title">Inicio de Sesion</h2>
         <InputField id="user" type="text" name="user_l" placeholder='Usuario' icon="person"/>
         <InputField id="pass" type="password" name="pass_l" placeholder='Contraseña' icon="lock"/>

@@ -50,7 +50,7 @@ body{
   box-shadow: 0 0 1rem 0 rgba(0 0 0 / .2);
 }
 
-.container__form h2 {
+.from__title {
   font-size: 3rem;
   text-align: center;
   text-transform: capitalize;

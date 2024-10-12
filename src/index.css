@@ -101,6 +101,35 @@ body{
   color: var(--boxColor);
 }
 
+.input__fullname {
+  position: relative;
+  display: flex;
+  width: 31rem;
+  margin: 3rem 0;
+  gap: 0.3rem;
+}
+
+.input__fullname i{
+  position: absolute;
+  left: 1rem;
+  color: var(--opacColor);
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: capitalize;
+  transform: all .5s ease;
+}
+.input__fullname input{
+  width: 52%;
+  height: 4rem;
+  padding: 0 3.4rem;
+  border-radius: .5rem;
+  border: .1rem solid var(--opacColor);
+  outline: none;
+  font-size: 1.6rem;
+  color: var(--boxColor);
+}
+
+
 .input__field:focus{
   border-color: var(--contrastColor);
 } 

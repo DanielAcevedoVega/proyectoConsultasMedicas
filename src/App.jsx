@@ -21,7 +21,7 @@ const App = () => {
       <img src="public/logoAmesta.svg" alt="" />
       <form action="#" className='login__form' onSubmit={login}>
       <h2 className="from__title">Inicio de Sesion</h2>
-        <InputField id="user" type="text" name="user_l" placeholder='Usuario' icon="person"/>
+        <InputField id="email" type="email" name="email_l" placeholder='Correo Electronico' icon="email"/>
         <InputField id="pass" type="password" name="pass_l" placeholder='Contraseña' icon="lock"/>
 
         <div className='forgot__pass__link'>

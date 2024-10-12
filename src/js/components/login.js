@@ -1,13 +1,13 @@
 const login = (e)=>{
     e.preventDefault();
-    const username = e.target.elements.user_l.value
+    const emailV = e.target.elements.email_l.value
     const password = e.target.elements.pass_l.value
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    const user = users.find(user => user.user === username && user.password === password);
+    const email = users.find(email => email.email === emailV && email.password === password);
 
-    if (user) {
+    if (email) {
         console.log('Inicio de sesión exitoso');
         window.location.href= './public/dashboard.html'
     } else {

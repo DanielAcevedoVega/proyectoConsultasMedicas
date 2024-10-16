@@ -51,8 +51,16 @@ const App = () => {
         localStorage.removeItem('userData');
     };
 
+    const handleDeleteAccount = () => {
+      console.log('Delete account function called');
+      setIsLoggedIn(false);
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('userData');
+      window.location.reload();
+  };
+
     if (isLoggedIn) {
-        return <MainPage userData={userData} handleLogout={handleLogout} />;
+        return <MainPage userData={userData} handleLogout={handleLogout} handleDeleteAccount={handleDeleteAccount}/>;
     }
 
     return (

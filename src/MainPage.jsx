@@ -4,7 +4,7 @@ import Mascotas from './components/Mascotas';
 import Citas from './components/Citas';
 import Cuenta from './components/Cuenta';
 
-const MainPage = ({ userData, handleLogout }) => {
+const MainPage = ({ userData, handleLogout, handleDeleteAccount}) => {
     useEffect(() => {
 
         document.body.classList.add('mainPageBody');
@@ -27,7 +27,7 @@ const MainPage = ({ userData, handleLogout }) => {
             case 'appointments':
                 return <Citas />;
             case 'account':
-                return <Cuenta />;
+                return <Cuenta handleDeleteAccount={handleDeleteAccount}/>;
             default:
                 return (
                     <section className="section__container">
@@ -65,7 +65,7 @@ const MainPage = ({ userData, handleLogout }) => {
                     </ul>
                 </nav>
             </header>
-            {selectedSection && <button onClick={() => setSelectedSection(null)}>Back</button>}
+            {selectedSection && <button className='btn__back' onClick={() => setSelectedSection(null)}>&#8249;</button>}
             {!selectedSection && (
                 <section className="welcome">
                     <h3>{userData.firstname}</h3>

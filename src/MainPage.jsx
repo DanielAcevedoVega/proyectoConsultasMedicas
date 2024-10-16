@@ -4,7 +4,7 @@ import Mascotas from './components/Mascotas';
 import Citas from './components/Citas';
 import Cuenta from './components/Cuenta';
 
-const MainPage = ({ handleLogout }) => {
+const MainPage = ({ userData, handleLogout }) => {
     useEffect(() => {
 
         document.body.classList.add('mainPageBody');
@@ -68,8 +68,8 @@ const MainPage = ({ handleLogout }) => {
             {selectedSection && <button onClick={() => setSelectedSection(null)}>Back</button>}
             {!selectedSection && (
                 <section className="welcome">
-                    <h3>Nombre</h3>
-                    <span>Apellido</span>
+                    <h3>{userData.firstname}</h3>
+                    <span>{userData.lastname}</span>
                 </section>
             )}
             {renderContent()}

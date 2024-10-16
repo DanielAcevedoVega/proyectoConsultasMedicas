@@ -129,4 +129,18 @@ body.mainPageBody html {
 .container__article:hover img{
     filter: invert(46%) sepia(88%) saturate(996%) hue-rotate(158deg) brightness(90%) contrast(101%);
 }
-
+.btn__back{
+    margin: 2rem;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50%;
+}
+.btn__back:hover{
+    background-color: #ddd;
+    color: black;
+}
+.container__box{
+    padding: 2rem;
+}
